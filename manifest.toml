@@ -1,0 +1,58 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "dagu"
+name = "Dagu"
+description.en = "Cron alternative that comes with a Web UI"
+description.fr = "Alternative à Cron fournie avec une interface utilisateur Web"
+
+version = "1.14.5~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "free"
+admindoc = "https://dagu.readthedocs.io/en/latest/"
+code = "https://github.com/dagu-org/dagu"
+
+[integration]
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    in_subdir = false
+    url = "https://github.com/dagu-org/dagu/releases/download/v1.14.5/dagu_1.14.5_linux_amd64.tar.gz"
+    sha256 = "4d6f907d85cff223c20a29a87abce8f303fc5cd4b0bcae917ff4e26261ba316b"
+
+    # autoupdate.strategy = "latest_github_tag"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
