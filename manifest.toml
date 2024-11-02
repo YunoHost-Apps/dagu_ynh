@@ -7,7 +7,7 @@ name = "Dagu"
 description.en = "Cron alternative that comes with a Web UI"
 description.fr = "Alternative à Cron fournie avec une interface utilisateur Web"
 
-version = "1.14.5~ynh2"
+version = "1.14.5~ynh3"
 
 maintainers = ["eric_G"]
 
