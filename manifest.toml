@@ -7,7 +7,7 @@ name = "Dagu"
 description.en = "Cron alternative that comes with a Web UI"
 description.fr = "Alternative à Cron fournie avec une interface utilisateur Web"
 
-version = "1.14.5~ynh1"
+version = "1.14.5~ynh2"
 
 maintainers = ["eric_G"]
 
@@ -19,7 +19,7 @@ code = "https://github.com/dagu-org/dagu"
 [integration]
 yunohost = ">= 11.2.30"
 helpers_version = "2.1"
-architectures = "all"
+architectures = ["amd64"]
 multi_instance = true
 ldap = false
 sso = false
