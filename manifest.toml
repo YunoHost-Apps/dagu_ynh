@@ -42,8 +42,12 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     in_subdir = false
-    url = "https://github.com/dagu-org/dagu/releases/download/v1.14.5/dagu_1.14.5_linux_amd64.tar.gz"
-    sha256 = "4d6f907d85cff223c20a29a87abce8f303fc5cd4b0bcae917ff4e26261ba316b"
+    amd64.url = "https://github.com/dagu-org/dagu/releases/download/v1.14.5/dagu_1.14.5_linux_amd64.tar.gz"
+    amd64.sha256 = "4d6f907d85cff223c20a29a87abce8f303fc5cd4b0bcae917ff4e26261ba316b"
+    arm64.url = "https://github.com/dagu-org/dagu/releases/download/v1.14.5/dagu_1.14.5_linux_arm64.tar.gz"
+    arm64.sha256 = "c3cbb07ad82ddf2787f71e02a01085cfa6f09f2624d48b2574f7696e799cc8e6"
+    armhf.url = "https://github.com/dagu-org/dagu/releases/download/v1.14.5/dagu_1.14.5_linux_armv7.tar.gz"
+    armhf.sha256 = "bea39936cad56642a8151e81fc0a14120931dddb591ca12b88903988cdb07df0"
     # autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
