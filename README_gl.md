@@ -5,7 +5,9 @@ NON debe editarse manualmente.
 
 # Dagu para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/dagu.svg)](https://ci-apps.yunohost.org/ci/apps/dagu/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/dagu.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/dagu.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/dagu)](https://ci-apps.yunohost.org/ci/apps/dagu/)
+![Estado de funcionamento](https://apps.yunohost.org/badge/state/dagu)
+![Estado de mantemento](https://apps.yunohost.org/badge/maintained/dagu)
 
 [![Instalar Dagu con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=dagu)
 

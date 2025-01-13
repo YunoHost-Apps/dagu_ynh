@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # Dagu YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/dagu.svg)](https://ci-apps.yunohost.org/ci/apps/dagu/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/dagu.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/dagu.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/dagu)](https://ci-apps.yunohost.org/ci/apps/dagu/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/dagu)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/dagu)
 
 [![Instalatu Dagu YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=dagu)
 

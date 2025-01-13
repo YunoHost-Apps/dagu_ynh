@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # Dagu voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/dagu.svg)](https://ci-apps.yunohost.org/ci/apps/dagu/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/dagu.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/dagu.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/dagu)](https://ci-apps.yunohost.org/ci/apps/dagu/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/dagu)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/dagu)
 
 [![Dagu met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=dagu)
 

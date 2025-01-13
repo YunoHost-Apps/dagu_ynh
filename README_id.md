@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Dagu untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/dagu.svg)](https://ci-apps.yunohost.org/ci/apps/dagu/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/dagu.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/dagu.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/dagu)](https://ci-apps.yunohost.org/ci/apps/dagu/)
+![Status kerja](https://apps.yunohost.org/badge/state/dagu)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/dagu)
 
 [![Pasang Dagu dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=dagu)
 
