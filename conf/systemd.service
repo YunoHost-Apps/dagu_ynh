@@ -8,9 +8,9 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=__INSTALL_DIR__/dagu server --host=127.0.0.1 --port=__PORT__
+StandardOutput=append:/var/log/__APP__/__APP__.log
+StandardError=inherit
 
-### Depending on specificities of your service/app, you may need to tweak these
-### .. but this should be a good baseline
 # Sandboxing options to harden security
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
 NoNewPrivileges=yes
