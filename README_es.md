@@ -3,7 +3,7 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# Dagu para Yunohost
+# Dagu para YunoHost
 
 [![Nivel de integración](https://apps.yunohost.org/badge/integration/dagu)](https://ci-apps.yunohost.org/ci/apps/dagu/)
 ![Estado funcional](https://apps.yunohost.org/badge/state/dagu)
@@ -21,7 +21,7 @@ No se debe editar a mano.
 Dagu is a powerful Cron alternative that comes with a Web UI. It allows you to define dependencies between commands as a Directed Acyclic Graph (DAG) in a declarative YAML format. Dagu simplifies the management and execution of complex workflows. It natively supports running Docker containers, making HTTP requests, and executing commands over SSH.
 
 
-**Versión actual:** 1.16.6~ynh1
+**Versión actual:** 1.16.7~ynh1
 
 ## Capturas
 
