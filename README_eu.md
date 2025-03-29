@@ -21,7 +21,7 @@ EZ editatu eskuz.
 Dagu is a powerful Cron alternative that comes with a Web UI. It allows you to define dependencies between commands as a Directed Acyclic Graph (DAG) in a declarative YAML format. Dagu simplifies the management and execution of complex workflows. It natively supports running Docker containers, making HTTP requests, and executing commands over SSH.
 
 
-**Paketatutako bertsioa:** 1.16.6~ynh1
+**Paketatutako bertsioa:** 1.16.7~ynh1
 
 ## Pantaila-argazkiak
 
@@ -38,7 +38,7 @@ Dagu is a powerful Cron alternative that comes with a Web UI. It allows you to d
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/dagu_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/dagu_ynh/tree/testing --debug
