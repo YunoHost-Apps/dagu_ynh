@@ -55,7 +55,6 @@ ram.runtime = "50M"
     autoupdate.asset.armhf = "^dagu_.*_linux_armv7.tar.gz$"
     autoupdate.asset.arm64 = "^dagu_.*_linux_arm64.tar.gz$"
 
-
     [resources.system_user]
 
     [resources.install_dir]

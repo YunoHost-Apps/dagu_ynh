@@ -1,0 +1,13 @@
+[Unit]
+Description=Dagu scheduler
+After=network.target
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+WorkingDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/dagu scheduler --dags=__INSTALL_DIR__/.config/dagu/dags
+
+[Install]
+WantedBy=multi-user.target
