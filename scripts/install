@@ -7,6 +7,9 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
+
+timezone=$(timedatectl show --value --property=Timezone)
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
@@ -20,9 +23,9 @@ chmod +x "$install_dir/dagu"
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
-#ynh_script_progression "Adding $app's configuration files..."
+ynh_script_progression "Adding $app's configuration files..."
 
-#ynh_config_add --template="admin.yaml" --destination="$install_dir/.config/dagu/admin.yaml"
+ynh_config_add --template=".env" --destination="$install_dir/.env"
 
 #=================================================
 # SYSTEM CONFIGURATION
