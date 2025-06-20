@@ -33,7 +33,7 @@ mailOn:
 smtp:
   host: "localhost"
   port: "25"
-  username: "__ADMIN__"
+  username: "__APP__"
   password: "${SMTP_PASSWORD}"  # Use environment variable
 
 # Error mail settings
