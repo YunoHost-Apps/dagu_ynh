@@ -7,7 +7,7 @@ auth:
   basic:
     enabled: true
     username: __ADMIN__
-    password: ${DAGU_ADMIN_PASSWORD}  # From environment
+    password: __PASSWORD__  # From environment
 
 
 # Directories
@@ -20,7 +20,7 @@ auth:
 latestStatusToday: true
 
 # path to the DAGs directory
-dags: <the location of DAG configuration files>              # default: ${HOME}/.config/dagu/dags
+dags: __DATA_DIR__              # default: ${HOME}/.config/dagu/dags
 
 
 # API Token
@@ -31,7 +31,7 @@ dags: <the location of DAG configuration files>              # default: ${HOME}/
 baseConfig: __INSTALL_DIR__/config.yaml           # default: ${HOME}/.config/dagu/base.yaml
 
 # Working Directory
-workDir: ${HOME}/.config/dagu/base.yaml                      # default: DAG location
+#workDir: ${HOME}/.config/dagu/base.yaml                      # default: DAG location
 
 # SSL Configuration
 #tls:
