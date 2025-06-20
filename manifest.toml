@@ -33,6 +33,10 @@ ram.runtime = "50M"
     [install.domain]
     type = "domain"
 
+    [install.path]
+    type = "path"
+    default = "/dagu"
+
     [install.init_main_permission]
     type = "group"
     default = "visitors"
@@ -67,7 +71,8 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.data_dir]
-    
+    subdirs =  ["dags", "data"]
+
     [resources.permissions]
     main.url = "/"
 

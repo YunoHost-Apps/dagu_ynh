@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/dagu scheduler --dags=__INSTALL_DIR__/.config/dagu/dags
+ExecStart=__INSTALL_DIR__/dagu scheduler --dags=__INSTALL_DIR__/dags
 
 [Install]
 WantedBy=multi-user.target

@@ -1,0 +1,85 @@
+# base.yaml - Shared configuration for all DAGs
+
+# Environment variables available to all DAGs
+env:
+  - ENVIRONMENT: production
+  - LOG_LEVEL: info
+  - COMPANY: "YunoHost"
+
+# Default parameters
+params:
+  - DEFAULT_TIMEOUT: 3600
+  - RETRY_LIMIT: 3
+
+# Queue assignment
+queue: "default"              # Default queue for all DAGs
+maxActiveRuns: 1              # Maximum concurrent runs per DAG
+
+# Working directory
+workDir: "/opt/dagu/work"     # Default working directory
+
+# Log configuration
+logDir: "/var/log/__APP__"    # Custom log directory for DAG output
+
+# History retention
+histRetentionDays: 30         # Keep execution history for 30 days
+
+# Email notifications
+mailOn:
+  failure: true               # Send email on failure
+  success: false              # Don't send on success
+
+# SMTP configuration
+smtp:
+  host: "localhost"
+  port: "25"
+  username: "__ADMIN__"
+  password: "${SMTP_PASSWORD}"  # Use environment variable
+
+# Error mail settings
+errorMail:
+  from: "dagu@__DOMAIN__"
+  to: "__EMAIL__"
+  prefix: "[DAGU ERROR]"
+  attachLogs: true            # Attach execution logs
+
+# Info mail settings
+infoMail:
+  from: "dagu@__DOMAIN__"
+  to: "__EMAIL__"
+  prefix: "[DAGU INFO]"
+
+
+
+
+
+
+
+schedule: "5 4 * * *" # Run at 04:05.
+steps:
+  - name: scheduled job
+    command: job.sh
+
+# Email notification settings
+mailOn:
+  failure: true
+  success: true
+
+# SMTP server settings
+smtp:
+  host: "localhost"
+  port: "25"
+  username: "__APP__"
+  password: "__MAIL_PWD__"
+
+# Error mail configuration
+errorMail:
+  from: "dagu@__DOMAIN__"
+  to: "__EMAIL__"
+  prefix: "[Error]"
+
+# Info mail configuration
+infoMail:
+  from: "dagu@__DOMAIN__"
+  to: "__EMAIL__"
+  prefix: "[Info]"
