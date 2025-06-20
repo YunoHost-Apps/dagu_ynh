@@ -13,6 +13,7 @@ source /usr/share/yunohost/helpers
 ynh_script_progression "Stopping $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="stop"
+ynh_systemctl --service="${app}-scheduler" --action="stop"
 
 #=================================================
 # ENSURE DOWNWARD COMPATIBILITY
@@ -44,7 +45,7 @@ ynh_config_add_systemd
 ynh_config_add_systemd --service="${app}-scheduler" --template="scheduler.service"
 
 yunohost service add "$app" --description="Cron alternative" --log="/var/log/$app/$app.log"
-yunohost service add "${app}-scheduler" --description="Dagu scheduler" --log="/var/log/$app/$app.log"
+yunohost service add "${app}-scheduler" --description="Dagu scheduler" --log="/var/log/$app/$app-scheduler.log"
 
 ynh_config_add_logrotate
 
@@ -54,7 +55,7 @@ ynh_config_add_logrotate
 ynh_script_progression "Starting $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="start" --log_path="/var/log/$app/$app.log"
-ynh_systemctl --service="${app}-scheduler" --action="start"
+ynh_systemctl --service="${app}-scheduler" --action="start" --log_path="systemd"
 
 #=================================================
 # END OF SCRIPT
