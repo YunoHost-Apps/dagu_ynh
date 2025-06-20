@@ -1,5 +1,20 @@
-host: 127.0.0.1
+# Server settings
+host: 127.0.0.1  # Listen on all interfaces
 port: __PORT__
+
+# Authentication
+auth:
+  basic:
+    enabled: true
+    username: __ADMIN__
+    password: ${DAGU_ADMIN_PASSWORD}  # From environment
+
+
+# Directories
+#dagsDir: /opt/dagu/workflows
+#logDir: /var/log/__APP__
+#dataDir: /var/lib/dagu
+
 
 # to show latest status of dags from today or history
 latestStatusToday: true
@@ -7,29 +22,21 @@ latestStatusToday: true
 # path to the DAGs directory
 dags: <the location of DAG configuration files>              # default: ${HOME}/.config/dagu/dags
 
-# Web UI Color & Title
-navbarColor: <ui header color>                               # header color for web UI (e.g. "#ff0000")
-navbarTitle: <ui title text>                                 # header title for web UI (e.g. "PROD")
-
-# Basic Auth
-isBasicAuth: true
-basicAuthUsername: __ADMIN__
-basicAuthPassword: __PASSWORD__
 
 # API Token
-isAuthToken: <true|false>                                    # enables API token
-authToken: <token for API access>                            # API token
+#isAuthToken: <true|false>                                    # enables API token
+#authToken: <token for API access>                            # API token
 
 # Base Config
-baseConfig: __INSTALL_DIR__/.config/dagu/base.yaml           # default: ${HOME}/.config/dagu/base.yaml
+baseConfig: __INSTALL_DIR__/.config/dagu/config.yaml           # default: ${HOME}/.config/dagu/base.yaml
 
 # Working Directory
 workDir: ${HOME}/.config/dagu/base.yaml                      # default: DAG location
 
 # SSL Configuration
-tls:
-    certFile: <path to SSL certificate file>
-    keyFile: <path to SSL key file>
+#tls:
+#    certFile: <path to SSL certificate file>
+#    keyFile: <path to SSL key file>
 
 schedule: "5 4 * * *" # Run at 04:05.
 steps:

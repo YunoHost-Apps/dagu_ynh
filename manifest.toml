@@ -37,6 +37,12 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
+    [install.admin]
+    type = "user"
+
+    [install.password]
+    type = "password"
+    
 [resources]
 
     [resources.sources]
@@ -56,6 +62,7 @@ ram.runtime = "50M"
     autoupdate.asset.arm64 = "^dagu_.*_linux_arm64.tar.gz$"
 
     [resources.system_user]
+    allow_email = true
 
     [resources.install_dir]
 
