@@ -48,38 +48,3 @@ infoMail:
   from: "dagu@__DOMAIN__"
   to: "__EMAIL__"
   prefix: "[DAGU INFO]"
-
-
-
-
-
-
-
-schedule: "5 4 * * *" # Run at 04:05.
-steps:
-  - name: scheduled job
-    command: job.sh
-
-# Email notification settings
-mailOn:
-  failure: true
-  success: true
-
-# SMTP server settings
-smtp:
-  host: "localhost"
-  port: "25"
-  username: "__APP__"
-  password: "__MAIL_PWD__"
-
-# Error mail configuration
-errorMail:
-  from: "dagu@__DOMAIN__"
-  to: "__EMAIL__"
-  prefix: "[Error]"
-
-# Info mail configuration
-infoMail:
-  from: "dagu@__DOMAIN__"
-  to: "__EMAIL__"
-  prefix: "[Info]"
