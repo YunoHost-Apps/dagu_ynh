@@ -33,9 +33,6 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace #--keep=".config/dagu/
 
 #ynh_config_add --template="admin.yaml" --destination="$install_dir/.config/dagu/admin.yaml"
 
-#chmod 400 "$install_dir/.config/dagu/admin.yaml"
-#chown "$app:$app" "$install_dir/.config/dagu/admin.yaml"
-
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
@@ -44,7 +41,10 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 ynh_config_add_nginx
 
 ynh_config_add_systemd
+ynh_config_add_systemd --service="${app}-scheduler" --template="scheduler.service"
+
 yunohost service add "$app" --description="Cron alternative" --log="/var/log/$app/$app.log"
+yunohost service add "${app}-scheduler" --description="Dagu scheduler" --log="/var/log/$app/$app.log"
 
 ynh_config_add_logrotate
 
@@ -53,7 +53,8 @@ ynh_config_add_logrotate
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --wait_until="Serving " --log_path="/var/log/$app/$app.log"
+ynh_systemctl --service="$app" --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemctl --service="${app}-scheduler" --action="start"
 
 #=================================================
 # END OF SCRIPT
