@@ -28,7 +28,7 @@ dags: <the location of DAG configuration files>              # default: ${HOME}/
 #authToken: <token for API access>                            # API token
 
 # Base Config
-baseConfig: __INSTALL_DIR__/.config/dagu/config.yaml           # default: ${HOME}/.config/dagu/base.yaml
+baseConfig: __INSTALL_DIR__/config.yaml           # default: ${HOME}/.config/dagu/base.yaml
 
 # Working Directory
 workDir: ${HOME}/.config/dagu/base.yaml                      # default: DAG location

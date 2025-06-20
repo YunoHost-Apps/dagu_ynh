@@ -22,7 +22,7 @@ chmod +x "$install_dir/dagu"
 #=================================================
 ynh_script_progression "Adding $app's configuration files..."
 
-ynh_config_add --template="config.yaml" --destination="$install_dir/.config/dagu/config.yaml"
+ynh_config_add --template="config.yaml" --destination="$install_dir/config.yaml"
 
 #=================================================
 # SYSTEM CONFIGURATION
