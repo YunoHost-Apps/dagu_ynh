@@ -23,14 +23,19 @@ ynh_script_progression "Restoring system configurations related to $app..."
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/etc/systemd/system/$app.service"
+ynh_restore "/etc/systemd/system/${app}-scheduler.service"
 systemctl enable "$app.service" --quiet
+systemctl enable "${app}-scheduler.service" --quiet
+
 yunohost service add "$app" --description="Cron alternative" --log="/var/log/$app/$app.log"
+yunohost service add "${app}-scheduler" --description="Dagu scheduler" --log="/var/log/$app/$app-scheduler.log"
 
 ynh_restore "/etc/logrotate.d/$app"
 
 #=================================================
 # RESTORE VARIOUS FILES
 #=================================================
+
 ynh_restore "/var/log/$app/"
 
 #=================================================
@@ -38,7 +43,8 @@ ynh_restore "/var/log/$app/"
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
 
-ynh_systemctl --service="$app" --action="start" --wait_until="Serving " --log_path="/var/log/$app/$app.log"
+ynh_systemctl --service="$app" --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemctl --service="${app}-scheduler" --action="start" --log_path="systemd"
 
 ynh_systemctl --service=nginx --action=reload
 

@@ -6,8 +6,9 @@ After=network.target
 Type=simple
 User=__APP__
 Group=__APP__
+EnvironmentFile=__INSTALL_DIR__/.env
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/dagu server --host=127.0.0.1 --port=__PORT__
+ExecStart=__INSTALL_DIR__/dagu server
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 
