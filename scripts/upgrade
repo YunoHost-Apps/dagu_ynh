@@ -8,6 +8,12 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
+# INITIALIZE AND STORE SETTINGS
+#=================================================
+
+timezone=$(timedatectl show --value --property=Timezone)
+
+#=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
