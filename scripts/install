@@ -27,7 +27,7 @@ ynh_script_progression "Adding $app's configuration files..."
 
 ynh_config_add --template=".env" --destination="$install_dir/.env"
 
-ynh_config_add --template="base.yaml" --destination="$install_dir/.config/dagu/base.yaml"
+ynh_config_add --template="base.yaml" --destination="$install_dir/base.yaml"
 
 #=================================================
 # SYSTEM CONFIGURATION
