@@ -8,6 +8,7 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 email=$(ynh_user_get_info --username=$admin --key=mail)
+timezone=$(timedatectl show --value --property=Timezone)
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
