@@ -22,8 +22,6 @@ ynh_script_progression --message="Restoring the data directory..."
 
 ynh_restore "$data_dir"
 
-chown -R $app:$app "$data_dir"
-
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
 #=================================================
