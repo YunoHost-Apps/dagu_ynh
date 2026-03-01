@@ -13,7 +13,7 @@ maintainers = []
 
 [upstream]
 license = "GPL-3.0"
-admindoc = "https://dagu.readthedocs.io/en/latest/"
+admindoc = "https://docs.daguit.dev/"
 code = "https://github.com/dagu-org/dagu"
 website = "https://dagu.cloud/"
 
