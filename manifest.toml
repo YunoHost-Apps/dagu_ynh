@@ -7,7 +7,7 @@ name = "Dagu"
 description.en = "Cron alternative that comes with a Web UI"
 description.fr = "Alternative à Cron fournie avec une interface utilisateur Web"
 
-version = "2.11.2~ynh1"
+version = "2.12.0~ynh1"
 
 maintainers = []
 
@@ -44,12 +44,12 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     in_subdir = false
-    amd64.url = "https://github.com/dagucloud/dagu/releases/download/v2.11.2/dagu_2.11.2_linux_amd64.tar.gz"
-    amd64.sha256 = "ccf33ff9d86e2463faeb7e7b30ebca82a96e8c76b6ea2e282adb506db69feb3d"
-    arm64.url = "https://github.com/dagucloud/dagu/releases/download/v2.11.2/dagu_2.11.2_linux_arm64.tar.gz"
-    arm64.sha256 = "deafa42c76f8d5433249640bbce20bf4bcebd581ac0081993d2b81bb07761d7a"
-    armhf.url = "https://github.com/dagucloud/dagu/releases/download/v2.11.2/dagu_2.11.2_linux_armv7.tar.gz"
-    armhf.sha256 = "33192c7696b46c034afaaf4a17f93b78e3dd5f043b5b6e56adc60c07a25eaa8e"
+    amd64.url = "https://github.com/dagucloud/dagu/releases/download/v2.12.0/dagu_2.12.0_linux_amd64.tar.gz"
+    amd64.sha256 = "d1fb8a833ed4ada803ea597b23f650c4a8c757e5c069b02b59f882c9466c8145"
+    arm64.url = "https://github.com/dagucloud/dagu/releases/download/v2.12.0/dagu_2.12.0_linux_arm64.tar.gz"
+    arm64.sha256 = "fd06af4c98374d87e3991d0ce452d6d19205e384fb96b6758dd31a1fd2787d8f"
+    armhf.url = "https://github.com/dagucloud/dagu/releases/download/v2.12.0/dagu_2.12.0_linux_armv7.tar.gz"
+    armhf.sha256 = "7c6f8690c3e9ad87ee98c0e1f1462b9dc71da3b2b4f696ff86d8af2288c3d6bf"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "^dagu_.*_linux_amd64.tar.gz$"
